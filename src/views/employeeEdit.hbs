@@ -1,0 +1,9 @@
+<body>
+    {{>navbar}}
+        {{#each empData}}
+        <form class="row g-3" method="POST" action=""> 
+            {{> userForm}}
+        </form>
+        {{/each}}
+    </div>
+</body>

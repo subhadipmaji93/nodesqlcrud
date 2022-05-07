@@ -1,0 +1,53 @@
+<body>
+    {{>navbar}}
+    <div class="container-fluid">
+        <table class="table table-light mx-auto mt-5" id="emp-table">
+  <thead>
+    {{#each empData}}
+    <tr>
+      <th scope="col">Employee Information</th>
+      <th scope="col" class="text-end">
+          <a href="/employee/edit?id={{this.id}}" class="btn btn-dark btn-small">Edit</a>
+            <button class="btn btn-dark" onclick="deleteEmployee()">Delete</button>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+        <tr>
+            <th scope="row">ID: </th>
+            <td>{{this.id}}</td>
+        </tr>
+        <tr>
+            <th scope="row">First Name: </th>
+            <td>{{this.first_name}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Last Name: </th>
+            <td>{{this.last_name}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Phone: </th>
+            <td>{{this.phone}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Email: </th>
+            <td>{{this.email}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Organization: </th>
+            <td>{{this.organization}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Designation: </th>
+            <td>{{this.designation}}</td>
+        </tr>
+        <tr>
+            <th scope="row">Salary: </th>
+            <td>{{this.salary}}</td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
+    </div>
+    <script src="script/app.js"></script>
+</body>
